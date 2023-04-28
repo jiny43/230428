@@ -149,5 +149,4 @@ const source = { b: 4, c: 5 };
 const returnedTarget = Object.assign(target, source);
 console.log(returnedTarget);
 
-inquirer.prompt(questions).then((answers) => {
-  const { filename, title, useRoot,PtagContents} = Object.assign()
+// nquirer.prompt(questions).then((answers) => {
