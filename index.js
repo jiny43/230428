@@ -90,5 +90,17 @@ const Q = [
     type: "input",
     name: "filename",
     message: "HTML 파일 명을 입력하시오",
+    //validate 입력값을 인자로 받아 검증 결과를 반한 true면 유효
+    //예시
+    // function validateNumber(input) {
+    //   const isValid = !isNaN(input) && input !== "";
+    //   return isValid || "숫자가 아닙니다.";
+    // } input 숫자인지 검증해서 true나 실패메세지 반환
+    
+
+
+    validate:(value)=>{
+      if()
+    }
   },
 ];
