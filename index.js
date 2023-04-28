@@ -146,13 +146,6 @@ const Q = [
 //inquirer.prompt(questions, answers) -> promise를 반환하므로
 //Promise의 then() 메소드를 사용하여 입력값을 처리한다.
 //inquirer.prompt(questions).then((answers)=>{})
-<<<<<<< HEAD
-//질문에 대한 답변을 받아와 answers 에 저장
-const target = { a: 1, b: 2 };
-const source = { b: 4, c: 5 };
-const returnedTarget = Object.assign(target, source);
-console.log(returnedTarget);
-=======
 //입력값은 answers객체에 저장된다.
 
 // //질문에 대한 답변을 받아와 answers 에 저장
@@ -190,4 +183,3 @@ inquirer.prompt(Q).then((answers) => {
   fs.writeFileSync(`result/${filename}.html`, html);
   //파일이름
 });
->>>>>>> issue1
