@@ -69,3 +69,14 @@
 //pizza details:
 //- small pizza size
 //- cheese
+
+const { Command } = require("commander");
+const inquirer = require("inquirer");
+const fs = require("fs");
+
+const program = new Command();
+
+program
+  .option("-t, --title <title>", "HTML page title")
+  .option("-r, --root", "Use top-level <div> with ID 'root'")
+  .option("-b, --body <body>", "Body content for the HTML page");
