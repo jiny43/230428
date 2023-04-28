@@ -73,6 +73,7 @@
 const { Command } = require("commander");
 const inquirer = require("inquirer");
 const fs = require("fs");
+//디렉토리에 저장해야하므로 fs모듈 사용
 
 const program = new Command();
 
@@ -169,9 +170,9 @@ nquirer.prompt(questions).then((answers) => {
       <title>${title}</title>
     </head>
     <body>
-      ${useRoot ? 'div id="root"' : ""}
+      ${useRoot ? '<div id="root">' : ""}
       ${PtagContents}
-      ${useRoot ? '/div'}
+      ${useRoot ? "</div>" : ""}
       
     </body>
     </html>`;
