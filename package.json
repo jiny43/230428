@@ -1,0 +1,23 @@
+{
+  "name": "230428",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiny43/230428.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiny43/230428/issues"
+  },
+  "homepage": "https://github.com/jiny43/230428#readme",
+  "dependencies": {
+    "commander": "^10.0.1"
+  }
+}
