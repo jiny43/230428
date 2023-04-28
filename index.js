@@ -171,7 +171,7 @@ nquirer.prompt(questions).then((answers) => {
     <body>
       ${useRoot ? 'div id="root"' : ""}
       ${PtagContents}
-      
+      ${useRoot ? '/div'}
       
     </body>
     </html>`;
