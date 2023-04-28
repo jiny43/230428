@@ -127,13 +127,17 @@ const Q = [
     name: "useRoot",
     message: `body에 <div id="root">를 추가하시겠습니까?`,
     default: true,
-    when: () => !options.useRoot,
+    when: () => !options.Root,
     //options 객체 안에 useRoot값이 false인 경우
   },
   {
-    type: "",
+    //type : (문자열) 프롬프트의 유형입니다.
+    // 기본값: input- 가능한 값: input, number, confirm, list,
+    //rawlist, expand, checkbox, password,editor
+
+    type: "input",
     name: "PtagContents",
     message: "<P>안에 작성할 내용을 입력해주세요.</P>",
-    when: () => !options.PtagContents,
+    when: () => !options.Ptag,
   },
 ];
