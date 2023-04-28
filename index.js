@@ -144,8 +144,10 @@ const Q = [
 //inquirer.prompt(questions, answers) -> promise
 //inquirer.prompt(questions).then((answers)=>{})
 //질문에 대한 답변을 받아와 answers 에 저장
-filename, title, useRoot,
-
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+const returnedTarget = Object.assign(target, source);
+console.log(returnedTarget);
 
 inquirer.prompt(questions).then((answers) => {
-  const { filename, title, useRoot,PtagContents} = 
+  const { filename, title, useRoot,PtagContents} = Object.assign()
