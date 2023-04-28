@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jiny43/230428#readme",
   "dependencies": {
-    "commander": "^10.0.1"
+    "commander": "^10.0.1",
+    "inquirer": "^9.2.0"
   }
 }
