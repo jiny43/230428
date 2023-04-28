@@ -141,8 +141,11 @@ const Q = [
     when: () => !options.PtagContents,
   },
 ];
-//inquirer.prompt(questions, answers) -> promise
+//inquirer.prompt(questions, answers) -> promise를 반환하므로
+//Promise의 then() 메소드를 사용하여 입력값을 처리한다.
 //inquirer.prompt(questions).then((answers)=>{})
+//입력값은 answers객체에 저장된다.
+
 // //질문에 대한 답변을 받아와 answers 에 저장
 // const target = { a: 1, b: 2 };
 // const source = { b: 4, c: 5 };
@@ -163,9 +166,12 @@ nquirer.prompt(questions).then((answers) => {
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>${title}</title>
     </head>
     <body>
+      ${useRoot ? 'div id="root"' : ""}
+      ${PtagContents}
+      
       
     </body>
     </html>`;
