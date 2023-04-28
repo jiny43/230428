@@ -143,10 +143,18 @@ const Q = [
 ];
 //inquirer.prompt(questions, answers) -> promise
 //inquirer.prompt(questions).then((answers)=>{})
-//질문에 대한 답변을 받아와 answers 에 저장
-const target = { a: 1, b: 2 };
-const source = { b: 4, c: 5 };
-const returnedTarget = Object.assign(target, source);
-console.log(returnedTarget);
+// //질문에 대한 답변을 받아와 answers 에 저장
+// const target = { a: 1, b: 2 };
+// const source = { b: 4, c: 5 };
+// const returnedTarget = Object.assign(target, source);
+// console.log(target);
+// console.log(returnedTarget);
 
-// nquirer.prompt(questions).then((answers) => {
+nquirer.prompt(questions).then((answers) => {
+  const { filename, title, useRoot, PtagContents } = Object.assign(
+    {},
+    options,
+    answers
+  );
+  //{},options,answers 형태로 하나의 객체를 만듦
+});
