@@ -84,3 +84,11 @@ program
 program.parse(process.argv);
 
 const options = program.opts();
+
+const Q = [
+  {
+    type: "input",
+    name: "filename",
+    message: "HTML 파일 명을 입력하시오",
+  },
+];
