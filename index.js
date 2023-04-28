@@ -125,5 +125,6 @@ const Q = [
   {
     type: "confirm",
     name: "useRoot",
+    message: `body에 <div id="root">를 추가하시겠습니까?`,
   },
 ];
