@@ -178,4 +178,5 @@ nquirer.prompt(questions).then((answers) => {
     </html>`;
 
   fs.mkdirSync("result", { recursive: true });
+  fs.writeFileSync(`result/${filename}.html`, html);
 });
