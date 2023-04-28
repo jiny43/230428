@@ -45,25 +45,25 @@
 // [ '?', '!', '@' ]
 
 // CommonJS (.cjs) npm 예제코드
-const { Command } = require("commander");
-const program = new Command();
-//첫번째 인자로 옵션의 이름을, 두 번째 인자로 옵션의 설명
-//<>로 감싸진 값은 필수값을 의미.
-program
-  .option("-d, --debug", "output extra debugging")
-  .option("-s, --small", "small pizza size")
-  .option("-p, --pizza-type <type>", "flavour of pizza");
+// const { Command } = require("commander");
+// const program = new Command();
+// //첫번째 인자로 옵션의 이름을, 두 번째 인자로 옵션의 설명
+// //<>로 감싸진 값은 필수값을 의미.
+// program
+//   .option("-d, --debug", "output extra debugging")
+//   .option("-s, --small", "small pizza size")
+//   .option("-p, --pizza-type <type>", "flavour of pizza");
 
-//srgv 배열을 파싱하여 명령 줄 인자를 해석하고,
-program.parse(process.argv);
-//program.opts()사용하여 파싱 된 옵션 객체를 반환한다.
-const options = program.opts();
+// //srgv 배열을 파싱하여 명령 줄 인자를 해석하고,
+// program.parse(process.argv);
+// //program.opts()사용하여 파싱 된 옵션 객체를 반환한다.
+// const options = program.opts();
 
-//if문을 사용해서 옵션 객체의 각 프로퍼티를 검사하고, 해당 옵션에 대한 메세지를 출력한다.
-if (options.debug) console.log(options);
-console.log("pizza details:");
-if (options.small) console.log("- small pizza size");
-if (options.pizzaType) console.log(`- ${options.pizzaType}`);
+// //if문을 사용해서 옵션 객체의 각 프로퍼티를 검사하고, 해당 옵션에 대한 메세지를 출력한다.
+// if (options.debug) console.log(options);
+// console.log("pizza details:");
+// if (options.small) console.log("- small pizza size");
+// if (options.pizzaType) console.log(`- ${options.pizzaType}`);
 //node index.js --debug --small --pizza-type=cheese
 //{ debug: true, small: true, pizzaType: 'cheese' }
 //pizza details:
