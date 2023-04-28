@@ -73,6 +73,8 @@
 const { Command } = require("commander");
 const inquirer = require("inquirer");
 const fs = require("fs");
+// const { default: inquirer } = await import("inquirer");
+//디렉토리에 저장해야하므로 fs모듈 사용
 
 const program = new Command();
 
@@ -141,10 +143,51 @@ const Q = [
     when: () => !options.PtagContents,
   },
 ];
-//inquirer.prompt(questions, answers) -> promise
+//inquirer.prompt(questions, answers) -> promise를 반환하므로
+//Promise의 then() 메소드를 사용하여 입력값을 처리한다.
 //inquirer.prompt(questions).then((answers)=>{})
+<<<<<<< HEAD
 //질문에 대한 답변을 받아와 answers 에 저장
 const target = { a: 1, b: 2 };
 const source = { b: 4, c: 5 };
 const returnedTarget = Object.assign(target, source);
 console.log(returnedTarget);
+=======
+//입력값은 answers객체에 저장된다.
+
+// //질문에 대한 답변을 받아와 answers 에 저장
+// const target = { a: 1, b: 2 };
+// const source = { b: 4, c: 5 };
+// const returnedTarget = Object.assign(target, source);
+// console.log(target);
+// console.log(returnedTarget);
+
+inquirer.prompt(Q).then((answers) => {
+  const { filename, title, useRoot, PtagContents } = Object.assign(
+    {},
+    options,
+    answers
+  );
+  //{},options,answers 형태로 하나의 객체를 만듦
+  const html = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>${title}</title>
+    </head>
+    <body>
+      ${useRoot ? '<div id="root">' : ""}
+      ${PtagContents}
+      ${useRoot ? "</div>" : ""}
+      
+    </body>
+    </html>`;
+
+  fs.mkdirSync("result", { recursive: true });
+  //result폴더로 파일생성
+  fs.writeFileSync(`result/${filename}.html`, html);
+  //파일이름
+});
+>>>>>>> issue1
