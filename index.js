@@ -177,5 +177,5 @@ nquirer.prompt(questions).then((answers) => {
     </body>
     </html>`;
 
-  fs.mkdirSync(result);
+  fs.mkdirSync("result", { recursive: true });
 });
