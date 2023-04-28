@@ -107,4 +107,8 @@ const Q = [
       }
     },
   },
+  {
+    type: "input",
+    name: "title",
+  },
 ];
