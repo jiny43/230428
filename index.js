@@ -141,3 +141,5 @@ const Q = [
     when: () => !options.Ptag,
   },
 ];
+//inquirer.prompt(questions, answers) -> promise
+inquirer.prompt(Q),
