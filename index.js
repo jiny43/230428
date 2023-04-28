@@ -102,6 +102,8 @@ const Q = [
     validate: (value) => {
       if (value.length) {
         return true;
+      } else {
+        return "파일명을 입력하세요";
       }
     },
   },
