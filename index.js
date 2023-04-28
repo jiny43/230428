@@ -131,9 +131,9 @@ const Q = [
     //options 객체 안에 useRoot값이 false인 경우
   },
   {
-    type:"",
-    name:"tagContent",
-    message:"<P>안에 작성할 내용을 입력해주세요.</P>",
-    when:()=>
+    type: "",
+    name: "PtagContents",
+    message: "<P>안에 작성할 내용을 입력해주세요.</P>",
+    when: () => !options.PtagContents,
   },
 ];
