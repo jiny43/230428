@@ -119,5 +119,11 @@ const Q = [
     //두번째 인자는 true 일 때 출력한 질문
     //when 함수를 사용하여 출력되는 질문 객체는 반드시 name속성에 정의되어 있어야 함.
     when: () => !options.title,
+    //options 객체 안에 title 속성이 존재하지 않거나
+    //title 속서 값이 falsy한 경우
+  },
+  {
+    type: "confirm",
+    name: "useRoot",
   },
 ];
