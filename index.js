@@ -40,3 +40,6 @@ program
   });
 
 program.parse();
+//node index.js help split
+//ode index.js split --separator=/ ?/!/@
+// [ '?', '!', '@' ]
