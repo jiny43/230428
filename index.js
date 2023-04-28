@@ -96,7 +96,7 @@ const Q = [
     //   const isValid = !isNaN(input) && input !== "";
     //   return isValid || "숫자가 아닙니다.";
     // } input 숫자인지 검증해서 true나 실패메세지 반환
-    
+    //isValid 변수에는 true, false 값이 저장됨.
 
 
     validate:(value)=>{
