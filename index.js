@@ -132,8 +132,8 @@ const Q = [
   },
   {
     type:"",
-    name:"P",
-    message:"<P></P>",
+    name:"tagContent",
+    message:"<P>안에 작성할 내용을 입력해주세요.</P>",
     when:()=>
   },
 ];
