@@ -73,6 +73,7 @@
 const { Command } = require("commander");
 const inquirer = require("inquirer");
 const fs = require("fs");
+// const { default: inquirer } = await import("inquirer");
 //디렉토리에 저장해야하므로 fs모듈 사용
 
 const program = new Command();
@@ -154,7 +155,7 @@ const Q = [
 // console.log(target);
 // console.log(returnedTarget);
 
-nquirer.prompt(questions).then((answers) => {
+inquirer.prompt(Q).then((answers) => {
   const { filename, title, useRoot, PtagContents } = Object.assign(
     {},
     options,
@@ -178,5 +179,7 @@ nquirer.prompt(questions).then((answers) => {
     </html>`;
 
   fs.mkdirSync("result", { recursive: true });
+  //result폴더로 파일생성
   fs.writeFileSync(`result/${filename}.html`, html);
+  //파일이름
 });
