@@ -80,3 +80,7 @@ program
   .option("-t, --title <title>", "HTML page title")
   .option("-r, --root", "Use top-level <div> with ID 'root'")
   .option("-b, --body <body>", "Body content for the HTML page");
+
+program.parse(process.argv);
+
+const options = program.opts();
